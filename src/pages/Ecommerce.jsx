@@ -81,9 +81,29 @@ const Ecommerce = () => {
             <div className="border-r-1 border-color m-4 pr-10">
               <div>
                 <p>
-                  <span className="text-3xl font-semibold">35,438</span>
+                  <span className="text-3xl font-semibold">$35,438</span>
+                  <span className="p-1.5 hover:drop-shadow-md cursor-pointer rounded-full text-white text-xs bg-green-500 ml-3">
+                    13%
+                  </span>
+                </p>
+                <p className="text-gray-500 mt-1">Budget</p>
+              </div>
+              <div className="mt-8">
+                <p>
+                  <span className="text-3xl font-semibold">$12,228</span>
                 </p>
                 <p className="text-gray-500 mt-1">Expense</p>
+              </div>
+              <div className="mt-5">
+                <SparkLine
+                  currenColor="blue"
+                  id="line-sparkline"
+                  type="line"
+                  height="80px"
+                  width="250px"
+                  data={SparklineAreaData}
+                  area="blue"
+                />
               </div>
             </div>
           </div>
